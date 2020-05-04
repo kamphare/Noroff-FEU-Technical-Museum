@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&family=Staatliches&display=swap");
+
+:root {
+  --softPurple: #986099;
+  --purple: #903bff;
+  --eggplant: #461259;
+  --yellow: #ffef7a;
+  --orange: #ffb654;
+  --green: #21ff5b;
+  --aqua: #21ffa0;
+  --reddish: #cc364f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: oldlace;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+main {
+  max-width: 60%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 3em 5em;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h1 {
+  margin-bottom: 1.5em;
+}
+
+h2 {
+  margin-bottom: 1.2em;
+}
+
+h3 {
+  margin-bottom: 1.1em;
+}
+
+p {
+  margin-bottom: 0.8em;
+  letter-spacing: 0.05em;
+}
+
+.banner,
+.nav {
+  font-family: "Staatliches", cursive;
+}
+
+.banner {
+  background-color: var(--softPurple);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 4em;
+  position: relative;
+  z-index: 50;
+  color: whitesmoke;
+  text-shadow: 5px 5px 0px #190520;
+}
+
+.flex-wrapper {
+  display: flex;
+}
+
+.nav {
+  height: 100%;
+  background-color: #fff;
+  padding: 2em 0;
+  position: fixed;
+  padding-top: 10%;
+}
+
+.nav__item {
+  width: 220px;
+  padding: 2em 3em;
+  font-size: 1.2em;
+  text-align: center;
+  font-style: none;
+}
+
+.footer {
+  padding: 2em;
+  background-color: var(--eggplant);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.soft-purple,
+.reddish,
+.orange,
+.yellow,
+.aqua {
+}
+
+.soft-purple-border {
+  border-right: 10px solid var(--softPurple);
+}
+.reddish-border {
+  border-right: 10px solid var(--reddish);
+}
+.orange-border {
+  border-right: 10px solid var(--orange);
+}
+.yellow-border {
+  border-right: 10px solid var(--yellow);
+}
+.aqua-border {
+  border-right: 10px solid var(--aqua);
+}
