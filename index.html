@@ -7,43 +7,49 @@
     <title>Technical Museum of Larvik</title>
   </head>
   <body class="about-bg bg">
-    <div class="flex-wrapper bg">
-      <div class="flex-wrapper__nav">
-        <nav>
-          <div class="nav">
-            <a href="/">
-              <div class="nav__item soft-purple soft-purple-border">
-                About
-              </div>
-            </a>
-            <a href="./exhibition-spaces.html">
-              <div class="nav__item reddish reddish-border">Exhibition Spaces</div> 
-            </a>
-            <a href="./events.html"><div class="nav__item orange orange-border">Events</div>
-              </a>
-            <a href="./visit.html">
-              <div class="nav__item yellow yellow-border">
-                Visit
-              </div>
-            </a>
-            <a href="./get-involved.html">
-              <div class="nav__item aqua aqua-border">
-                Get Involved
-              </div>
-            </a>
-            </div>
-          </div>
-        </nav>
+    <nav class="nav">
+      <div class="nav__decoration reddish-bg">
+        <!-- empty div used as decoration -->
       </div>
-      <div class="flex-wrapper__nav">
-        <header>
-          <div class="banner">
-            <a class="banner__text" href="/">Technical Museum of Larvik</a>
-          </div>
-        </header>
-        <main>
-          <h1>Community Science Museum</h1>
-          <h2>“Explore together”</h2>
+      <a href="/">
+        <div class="nav__item fade-to-midgrey midgrey-border">
+          About
+        </div>
+      </a>
+      <a href="./exhibition-spaces.html">
+        <div class="nav__item fade-to-reddish reddish-border">
+          Exhibition Spaces
+        </div>
+      </a>
+      <a href="./events.html">
+        <div class="nav__item fade-to-orange orange-border">
+          Events
+        </div>
+      </a>
+      <a href="./visit.html">
+        <div class="nav__item fade-to-lillac lillac-border">
+          Visit
+        </div>
+      </a>
+      <a href="./get-involved.html">
+        <div class="nav__item fade-to-aqua aqua-border">
+          Get Involved
+        </div>
+      </a>
+      <div class="nav__decoration reddish-bg">
+        <!-- empty div used as decoration -->
+      </div>
+    </nav>
+    <header>
+      <div class="banner">
+        <a class="banner__text" href="/">Technical Museum of Larvik</a>
+      </div>
+    </header>
+    <main class="content">
+      <h1>Community Science Museum</h1>
+      <h2>“Explore together”</h2>
+      <div class="section">
+        <div class="section__copy">
           <p>
             Come join us at the Community Science Museum where we’re committed
             to making science accessible to all.
@@ -68,8 +74,15 @@
             dinosaur exhibits – they only come to life at night when everyone’s
             gone home).
           </p>
-          <h2>Explore</h2>
-          <h3>For kids</h3>
+        </div>
+      </div>
+      <div class="decoration-bar reddish-bg">
+        <!-- empty div used as decoration -->
+      </div>
+      <h2>Explore</h2>
+      <h3 class="section__title">For kids</h3>
+      <div class="section">
+        <div class="section__copy">
           <p>
             Are you a young person looking to learn more about science? Come on
             down to our museum, there’s plenty to see and do.
@@ -91,7 +104,21 @@
             Each holiday we pick a new theme to explore. To find out more about
             the holiday club and how you can join, send us a message.
           </p>
-          <h3>For teachers</h3>
+        </div>
+        <div class="section__image--right">
+          <img
+            src="./img/child-reading.jpg"
+            alt="child sitting on stack of books, reading"
+            class="image portrait orange-bg"
+          />
+        </div>
+      </div>
+      <div class="decoration-bar orange-bg">
+        <!-- empty div used as decoration -->
+      </div>
+      <div class="section vertical">
+        <h3 class="section__title">For teachers</h3>
+        <div class="section__copy">
           <p>
             As a community-driven museum, we want to work with schools to create
             places of learning and exploring. Our team are on hand to give your
@@ -104,7 +131,21 @@
             facilities and to arrange a time to bring your students through for
             a visit.
           </p>
-          <h3>Researchers</h3>
+        </div>
+        <div class="section__image centered">
+          <img
+            src="./img/child_blackboard.jpg"
+            alt="child pondering drawings on blackboard"
+            class="image landscape reddish-bg"
+          />
+        </div>
+      </div>
+      <div class="decoration-bar reddish-bg">
+        <!-- empty div used as decoration -->
+      </div>
+      <h3 class="section__title">Researchers</h3>
+      <div class="section vertical">
+        <div class="section__copy">
           <p>
             Are you looking to get involved with our team of researchers and
             academics? Our museum offers various ways for you to use our
@@ -112,9 +153,19 @@
             laboratory space, and a working relationship with a number of
             universities around the country.
           </p>
-        </main>
+        </div>
+        <div class="section__image centered">
+          <img
+            src="./img/person_microscope.jpg"
+            alt="person looking through microscope"
+            class="image landscape midgrey-bg"
+          />
+        </div>
       </div>
-    </div>
+      <div class="decoration-bar midgrey-bg">
+        <!-- empty div used as decoration -->
+      </div>
+    </main>
     <footer class="footer">
       Copyright &copy;
     </footer>

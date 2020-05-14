@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&family=Staatliches&display=swap");
 
 :root {
-  --softPurple: #986099;
-  --purple: #903bff;
-  --eggplant: #1a0720;
+  --midGrey: #606060;
+  --lillac: #7d6ff7;
+  --asphalt: #35363a;
   --yellow: #ffef7a;
   --orange: #ffb654;
   --green: #21ff5b;
   --aqua: #21ffa0;
   --reddish: #cc364f;
   --offwhite: #f7f6f5;
-  --transparentWhite: rgba(255, 255, 255, 0.9);
+  --transparentOffwhite: hsla(30, 11%, 96%, 96%);
+  --transparentWhite: hsla(0, 0%, 100%, 90%);
 }
 
 * {
@@ -31,32 +32,41 @@ body {
 
 main {
   max-width: 60%;
-  margin: 0 auto;
-  background-color: var(--offwhite);
-  padding: 3em 5em;
 }
 
 h1,
 h2,
 h3 {
   font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
 h1 {
-  margin-bottom: 1.5em;
+  font-size: 2.5em;
+  text-align: center;
 }
 
 h2 {
-  margin-bottom: 1.2em;
+  margin: 2.5em 0;
+  font-size: 1.8em;
+  text-align: center;
 }
 
 h3 {
-  margin-bottom: 1.1em;
+  margin-bottom: 0.5em;
+  font-size: 1.6em;
 }
 
 p {
-  margin-bottom: 0.8em;
+  font-size: 1em;
   letter-spacing: 0.05em;
+  margin: 1.5em 0;
+}
+
+.content {
+  margin: 0 auto;
+  background-color: var(--transparentOffwhite);
+  padding: 3em 8em;
 }
 
 .about-bg {
@@ -88,29 +98,27 @@ p {
 }
 
 .banner {
-  background-color: var(--softPurple);
+  background-color: var(--midGrey);
   text-align: center;
-  padding: 10px 0;
+  padding: 0.3em 0;
   font-size: 4em;
   position: relative;
   z-index: 50;
 }
 
 .banner__text {
-  color: whitesmoke;
+  color: var(--offwhite);
   text-shadow: 5px 5px 0px #190520;
   text-decoration: none;
-}
-
-.flex-wrapper {
-  display: flex;
+  letter-spacing: 0.25em;
 }
 
 .nav {
+  position: fixed;
   height: 100%;
   background-color: var(--transparentWhite);
-  position: fixed;
   padding-top: 10%;
+  letter-spacing: 0.1em;
 }
 
 .nav__item {
@@ -120,51 +128,94 @@ p {
   text-align: center;
   font-style: none;
   background-color: var(--transparentWhite);
+  transition: background-color 0.25s;
+  animation-timing-function: ease-out;
 }
 
-.soft-purple:hover {
-  background-color: var(--softPurple);
+.nav__decoration {
+  height: 1px;
+  width: 70%;
+  margin: 0.8em auto;
+  padding: 0;
 }
-.reddish:hover {
+
+.midgrey {
+  color: var(--midGrey);
+}
+
+.reddish {
+  color: var(--reddish);
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.lillac {
+  color: var(--lillac);
+}
+
+.aqua {
+  color: var(--aqua);
+}
+
+.midgrey-bg {
+  background-color: var(--midGrey);
+}
+
+.reddish-bg {
   background-color: var(--reddish);
 }
-.orange:hover {
+
+.orange-bg {
   background-color: var(--orange);
 }
-.yellow:hover {
-  background-color: var(--yellow);
+
+.lillac-bg {
+  background-color: var(--lillac);
 }
-.aqua:hover {
+
+.aqua-bg {
+  background-color: var(--aqua);
+}
+
+.fade-to-midgrey:hover {
+  background-color: var(--midGrey);
+}
+.fade-to-reddish:hover {
+  background-color: var(--reddish);
+}
+.fade-to-orange:hover {
+  background-color: var(--orange);
+}
+.fade-to-lillac:hover {
+  background-color: var(--lillac);
+}
+.fade-to-aqua:hover {
   background-color: var(--aqua);
 }
 
 .nav a {
-  color: var(--softPurple);
+  color: var(--midGrey);
   text-decoration: none;
 }
 
 .nav a:hover {
-  color: whitesmoke;
+  color: #ffffff;
+  text-shadow: 1.5px 1.5px 0px #190520;
 }
 
 .footer {
-  padding: 2em;
-  background-color: var(--eggplant);
+  padding: 4em 0;
+  background-color: var(--asphalt);
   text-align: center;
   position: relative;
   z-index: 1;
   color: white;
 }
 
-.soft-purple,
-.reddish,
-.orange,
-.yellow,
-.aqua {
-}
-
-.soft-purple-border {
-  border-right: 10px solid var(--softPurple);
+.midgrey-border {
+  border-right: 10px solid var(--midGrey);
 }
 .reddish-border {
   border-right: 10px solid var(--reddish);
@@ -172,9 +223,60 @@ p {
 .orange-border {
   border-right: 10px solid var(--orange);
 }
-.yellow-border {
-  border-right: 10px solid var(--yellow);
+.lillac-border {
+  border-right: 10px solid var(--lillac);
 }
 .aqua-border {
   border-right: 10px solid var(--aqua);
+}
+
+.section {
+  display: flex;
+}
+
+.section__title {
+  margin-top: 5em;
+}
+
+.section__image--left {
+  margin-right: 2em;
+}
+
+.section__image--right {
+  margin-left: 2em;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.image {
+  padding: 5px;
+}
+
+.portrait {
+  max-height: 400px;
+}
+
+.landscape {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.right-aligned {
+  justify-content: flex-end;
+}
+
+.left-aligned {
+  align-self: flex-start;
+}
+
+.centered {
+  margin: 1em auto;
+}
+
+.decoration-bar {
+  width: 80%;
+  height: 3px;
+  margin: 3em auto;
 }
