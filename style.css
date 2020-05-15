@@ -35,8 +35,7 @@ main {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   font-weight: 700;
   letter-spacing: 0.05em;
 }
@@ -47,20 +46,19 @@ h1 {
 }
 
 h2 {
-  margin: 2.5em 0;
+  margin-top: 2.5em;
+  margin-bottom: 0.8em;
   font-size: 1.8em;
-  text-align: center;
-}
-
-h3 {
-  margin-bottom: 0.5em;
-  font-size: 1.6em;
 }
 
 p {
   font-size: 1em;
   letter-spacing: 0.05em;
-  margin: 1.5em 0;
+  margin-top: 1.5em;
+}
+
+p:last-child {
+  margin-bottom: 0em;
 }
 
 .content {
@@ -73,12 +71,18 @@ p {
   background: url(./img/william-bout-264826.jpg);
 }
 
+.exhibitions-bg {
+  background: url(./img/person_spacesuit.jpg);
+  background-position: top;
+}
+
 .events-bg {
-  background: url(./img/);
+  background: url(./img/person-painting-VR.jpg);
 }
 
 .visit-bg {
-  background: url(./img/);
+  background: url(./img/museum-exterior.jpg);
+  background-position: center;
 }
 
 .involved-bg {
@@ -87,9 +91,8 @@ p {
 
 .bg {
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
   background-attachment: fixed;
+  background-size: cover;
 }
 
 .banner,
@@ -231,11 +234,10 @@ p {
 }
 
 .section {
-  display: flex;
 }
 
-.section__title {
-  margin-top: 5em;
+.section__flex-wrap {
+  display: flex;
 }
 
 .section__image--left {
@@ -263,20 +265,31 @@ p {
   margin: 0 auto;
 }
 
-.right-aligned {
-  justify-content: flex-end;
-}
-
-.left-aligned {
-  align-self: flex-start;
+.portrait.large {
+  max-height: 600px;
 }
 
 .centered {
-  margin: 1em auto;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
+.centered-text {
+  text-align: center;
 }
 
 .decoration-bar {
-  width: 80%;
+  width: 75%;
   height: 3px;
-  margin: 3em auto;
+  margin: 0 auto;
+  margin-top: 75px;
+}
+
+.map {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.extra-space {
+  margin: 100px 0;
 }
