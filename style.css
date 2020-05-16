@@ -28,6 +28,8 @@ html {
 body {
   font-family: "Noto Sans JP", sans-serif;
   color: #333;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -101,16 +103,17 @@ p:last-child {
 }
 
 .banner {
+  min-width: 100%;
   background-color: var(--midGrey);
   text-align: center;
   padding: 0.3em 0;
-  font-size: 4em;
   position: relative;
   z-index: 50;
 }
 
 .banner__text {
   color: var(--offwhite);
+  font-size: 4rem;
   text-shadow: 5px 5px 0px #190520;
   text-decoration: none;
   letter-spacing: 0.25em;
@@ -125,8 +128,7 @@ p:last-child {
 }
 
 .nav__item {
-  width: 220px;
-  padding: 2em 0;
+  padding: 2em 2em;
   font-size: 1.2em;
   text-align: center;
   font-style: none;
@@ -140,62 +142,6 @@ p:last-child {
   width: 70%;
   margin: 0.8em auto;
   padding: 0;
-}
-
-.midgrey {
-  color: var(--midGrey);
-}
-
-.reddish {
-  color: var(--reddish);
-}
-
-.orange {
-  color: var(--orange);
-}
-
-.lillac {
-  color: var(--lillac);
-}
-
-.aqua {
-  color: var(--aqua);
-}
-
-.midgrey-bg {
-  background-color: var(--midGrey);
-}
-
-.reddish-bg {
-  background-color: var(--reddish);
-}
-
-.orange-bg {
-  background-color: var(--orange);
-}
-
-.lillac-bg {
-  background-color: var(--lillac);
-}
-
-.aqua-bg {
-  background-color: var(--aqua);
-}
-
-.fade-to-midgrey:hover {
-  background-color: var(--midGrey);
-}
-.fade-to-reddish:hover {
-  background-color: var(--reddish);
-}
-.fade-to-orange:hover {
-  background-color: var(--orange);
-}
-.fade-to-lillac:hover {
-  background-color: var(--lillac);
-}
-.fade-to-aqua:hover {
-  background-color: var(--aqua);
 }
 
 .nav a {
@@ -215,22 +161,6 @@ p:last-child {
   position: relative;
   z-index: 1;
   color: white;
-}
-
-.midgrey-border {
-  border-right: 10px solid var(--midGrey);
-}
-.reddish-border {
-  border-right: 10px solid var(--reddish);
-}
-.orange-border {
-  border-right: 10px solid var(--orange);
-}
-.lillac-border {
-  border-right: 10px solid var(--lillac);
-}
-.aqua-border {
-  border-right: 10px solid var(--aqua);
 }
 
 .section {
@@ -292,4 +222,156 @@ p:last-child {
 
 .extra-space {
   margin: 100px 0;
+}
+
+.midgrey {
+  color: var(--midGrey);
+}
+
+.reddish {
+  color: var(--reddish);
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.lillac {
+  color: var(--lillac);
+}
+
+.aqua {
+  color: var(--aqua);
+}
+
+.midgrey-bg {
+  background-color: var(--midGrey);
+}
+
+.reddish-bg {
+  background-color: var(--reddish);
+}
+
+.orange-bg {
+  background-color: var(--orange);
+}
+
+.lillac-bg {
+  background-color: var(--lillac);
+}
+
+.aqua-bg {
+  background-color: var(--aqua);
+}
+
+.fade-to-midgrey:hover {
+  background-color: var(--midGrey);
+}
+.fade-to-reddish:hover {
+  background-color: var(--reddish);
+}
+.fade-to-orange:hover {
+  background-color: var(--orange);
+}
+.fade-to-lillac:hover {
+  background-color: var(--lillac);
+}
+.fade-to-aqua:hover {
+  background-color: var(--aqua);
+}
+
+.midgrey-border {
+  border-right: 10px solid var(--midGrey);
+}
+.reddish-border {
+  border-right: 10px solid var(--reddish);
+}
+.orange-border {
+  border-right: 10px solid var(--orange);
+}
+.lillac-border {
+  border-right: 10px solid var(--lillac);
+}
+.aqua-border {
+  border-right: 10px solid var(--aqua);
+}
+
+/***************** Media Queries *****************/
+
+@media screen and (max-width: 1501px) {
+  .content {
+    max-width: 70%;
+    margin-left: 250px;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1276px) {
+  .content {
+    max-width: 75%;
+  }
+
+  .section__flex-wrap {
+    flex-direction: column;
+  }
+
+  .section__image--right,
+  .section__image--left {
+    margin: 0 auto;
+  }
+
+  .banner__text {
+    font-size: 3.25rem;
+    letter-spacing: 0.25em;
+  }
+}
+
+@media screen and (max-width: 1001px) {
+  .content {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+
+  .nav {
+    min-width: 95%;
+    position: static;
+    display: flex;
+    padding-top: 0;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .nav__item {
+    height: 100%;
+    font-size: 1.2em;
+    flex: 1 1 20%;
+  }
+
+  .midgrey-border {
+    border-right: 0;
+    border-bottom: 10px solid var(--midGrey);
+  }
+  .reddish-border {
+    border-right: 0;
+    border-bottom: 10px solid var(--reddish);
+  }
+  .orange-border {
+    border-right: 0;
+    border-bottom: 10px solid var(--orange);
+  }
+  .lillac-border {
+    border-right: 0;
+    border-bottom: 10px solid var(--lillac);
+  }
+  .aqua-border {
+    border-right: 0;
+    border-bottom: 10px solid var(--aqua);
+  }
+
+  .nav__decoration {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 651px) {
 }
